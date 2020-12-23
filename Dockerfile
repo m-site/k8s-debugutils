@@ -15,7 +15,7 @@ RUN apt-get install -y \
 
 ### INSTALL : Netutils-Linux
 #RUN apt-get install -y \
-#  python3-pip
+# python3-pip
 #RUN pip3 install netutils-linux
 
 ### INSTALL : kubectl
