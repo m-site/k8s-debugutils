@@ -1,14 +1,12 @@
 FROM ubuntu:20.04
 
-RUN apt-get update
-
 ### INSTALL : Basic Tools
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y \
   vim \
   openssh-client
 
 ### INSTALL : Basic Network Utilities
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y \
   curl \
   iputils-ping \
   net-tools \
