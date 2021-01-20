@@ -11,7 +11,8 @@ RUN apt-get install -y \
 RUN apt-get install -y \
   curl \
   iputils-ping \
-  net-tools
+  net-tools \
+  dnsutils
 
 ### INSTALL : Netutils-Linux
 #RUN apt-get install -y \
