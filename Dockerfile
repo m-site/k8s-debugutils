@@ -22,3 +22,4 @@ RUN curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -
 RUN chmod +x ./kubectl
 RUN mv /kubectl /usr/local/bin/.
 
+ENTRYPOINT sleep infinity
