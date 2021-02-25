@@ -27,4 +27,14 @@ RUN curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -
 RUN chmod +x ./kubectl
 RUN mv /kubectl /usr/local/bin/.
 
-ENTRYPOINT sleep infinity
+# ENTRYPOINT sleep infinity
+
+RUN apt-get update && apt-get install -y \
+    nginx
+
+COPY volterra_info.sh /volterra_info.sh
+
+RUN chmod 755 /volterra_info.sh
+
+ENTRYPOINT /volterra_info.sh && /usr/sbin/nginx -g "daemon off;" 
+
